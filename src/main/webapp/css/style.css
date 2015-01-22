@@ -1,0 +1,6 @@
+img.mugshot {
+	float: left;
+	/*width: 128px;*/
+	height: 128px;
+	margin-right: 20px;
+}
