@@ -1,0 +1,32 @@
+body {
+	background-color: #ffff00;
+}
+
+#email {
+	width: 50%;
+}
+
+#message {
+	width: 50%;
+}
+
+.control-label.controls input {
+	background:#000 url('../img/flames.gif') 0 -30px repeat-x;
+}
+
+img.mugshot {
+	/*float: left;*/
+	/*width: 128px;*/
+	height: 256px;
+	margin-right: 20px;
+}
+
+p.pos_fixed {
+	positoin: fixed;
+	top:30px;
+	right: 5px;
+}
+
+/*{
+	border: 1px solid red;
+}*/
