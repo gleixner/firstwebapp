@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Contact Me</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script>
+		$( document ).ready(function() {
+			$('#submit').click(function() {
+				if($('#email').val() == '') {
+					$('#email').css('background-color', 'red');
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Contact Me</h1>
+	<form method="POST">
+	<div class="control-group">
+	<!-- <label class="control-label" for="email">Email!</label> -->
+  		<div class="form-group col-sm-12 col-md-12 col-lg-12" id="email">
+   			<label for="exampleInputEmail1">Email address</label>
+   			<input type="email" class="form-control" placeholder="Enter email">
+  		</div>
+	</div>
+	<div class="form-group col-sm-12 col-md-12 col-lg-12">
+		Message:
+	</div>
+	<div class="form-group col-sm-12 col-md-12 col-lg-12" id="message">
+    	<label for="message">Message</label>
+    	<input type="text" class="form-control" placeholder="Talk to me!">
+		<input id="submit" type="submit" value="Send it to me!!!"/>
+  	</div>
+	
+	</form>
+
+	<div class="clearfix"></div>
+		
+	<center>
+		<img src="img/mchammer.gif">
+		<img src="img/mchammer.gif">
+		<img src="img/mchammer.gif">
+		<img src="img/mchammer.gif">
+		<img src="img/mchammer.gif">
+		<img src="img/mchammer.gif">
+		<img src="img/mchammer.gif">
+		<img src="img/mchammer.gif">
+		<img src="img/mchammer.gif">
+		<img src="img/mchammer.gif">
+		<img src="img/mchammer.gif">
+	</center>
+</body>
+</html>
