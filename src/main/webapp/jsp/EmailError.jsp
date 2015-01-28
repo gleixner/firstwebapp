@@ -56,78 +56,44 @@
 </html>
 
 <script type="text/javascript">
-	var text1 = document.body.style.backgroundColor;
-	var text2 = document.body.style.color;
-	var boolean_value1 = true;
-	var boolean_value2 = true;
-	function strobe(color1, color2) {
-		if (boolean_value2) {
-//			document.body.style.backgroundColor = boolean_value1 ? 'black' : 'yellow';
-//			document.body.style.color = boolean_value1 ? 'yellow' : 'black';
-			document.body.style.backgroundColor = boolean_value1 ? color1 : color2;
-			document.body.style.color = boolean_value1 ? color2 : color1;
-			boolean_value1 = !boolean_value1;
-			setTimeout(strobe, 100, color1, color2); //in milliseconds
-		} else {
-			document.body.style.backgroundColor = text1;
-			document.body.style.color = text2;
-			boolean_value2 = true;
-			//alert("The else statement was executed...boolean_value2 evaluates to false");
-		}
-		console.log("bool1 is " + boolean_value1);
-		console.log("bool2 is " + boolean_value2);
-	}
+var text1 = document.body.style.backgroundColor;
+var text2 = document.body.style.color;
+var boolean_value1 = true;
+var boolean_value2 = true;
+var count = 0;
+function strobe() {
+    if( count == 0) {
+        document.body.style.backgroundColor = boolean_value1 ? 'black' : 'yellow';
+        document.body.style.color = boolean_value1 ? 'yellow' : 'black';
+        boolean_value1 = !boolean_value1;
+        setTimeout(strobe, 100);
+    }
+    else if(count == 1) {
+        document.body.style.backgroundColor = boolean_value1 ? 'purple' : 'green';
+        document.body.style.color = boolean_value1 ? 'green' : 'purple';
+        boolean_value1 = !boolean_value1;
+        setTimeout(strobe, 100);
+    }
+    else if(count == 2) {
+        document.body.style.backgroundColor = boolean_value1 ? 'red' : 'orange';
+        document.body.style.color = boolean_value1 ? 'orange' : 'red';
+        boolean_value1 = !boolean_value1;
+        setTimeout(strobe, 100);
+    }   
+    else {
+        document.body.style.backgroundColor = text1;
+        document.body.style.color = text2;
+    }
+	console.log("bool1 is " + boolean_value1);
+	console.log("bool2 is " + boolean_value2);
+}
 
-	function stop_strobe() {
-		boolean_value2 = false;
-	}
-	
-	function seq_strobe() {
-		strobe('black', 'yellow');
-		strobe('purple', 'red');
-		strobe('red', 'orange');
-	}
-	seq_strobe();
-	window.onclick = stop_strobe;
+function stop_strobe() {
+    count = count + 1;
+}
+
+strobe();
+window.onclick = stop_strobe;
+
 	
 </script>
-
-	var text1 = document.body.style.backgroundColor;
-	var text2 = document.body.style.color;
-	var boolean_value1 = true;
-	var boolean_value2 = true;
-    var count = 0;
-	function strobe() {
-		while (boolean_value2) {
-            if( count == 0) {
-                document.body.style.backgroundColor = boolean_value1 ? 'black' : 'yellow';
-                document.body.style.color = boolean_value1 ? 'yellow' : 'black';
-                boolean_value1 = !boolean_value1;
-                setTimeout(strobe, 100);
-             }
-		     else if(count == 1) {
-                document.body.style.backgroundColor = boolean_value1 ? 'purple' : 'green';
-                document.body.style.color = boolean_value1 ? 'green' : 'purple';
-                boolean_value1 = !boolean_value1;
-                setTimeout(strobe, 100);
-		    }
-		     else if(count == 2) {
-                document.body.style.backgroundColor = boolean_value1 ? 'red' : 'orange';
-                document.body.style.color = boolean_value1 ? 'orange' : 'red';
-                boolean_value1 = !boolean_value1;
-                setTimeout(strobe, 100);
-		    }            
-		console.log("bool1 is " + boolean_value1);
-		console.log("bool2 is " + boolean_value2);
-	}
-
-	function stop_strobe() {
-        count = count + 1;
-        if( click > 2) {
-		    boolean_value2 = false;
-        }
-	}
-	
-    strobe();
-	window.onclick = stop_strobe;
-	
