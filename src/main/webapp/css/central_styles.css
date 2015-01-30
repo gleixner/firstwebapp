@@ -2,6 +2,7 @@
 	background: #663399; /* Beccapurple 
 	margin: 0;
 }*/
+
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 	padding: 0;
@@ -10,22 +11,14 @@ h1, h2, h3, h4, h5, h6 {
 	color: rgb(107, 107, 132);
 }
 body {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 100%;
-	color: rgb(231,230,230);
-	width: 80%;
-	background-image: url("../img/city.JPG");
+	font: .8em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background-image: url("../img/city.jpg");
 	background-attachment: fixed;
 	background-position: center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
-	/*margin-right: auto;
-	margin-left: auto;
-	padding: 2.5% 2.5% 0;
-	background: white;
 
-	line-height: 1.8;*/
 h1 {
 	font: 1.6em Verdana, Geneva, sans-serif;
 	margin-bottom: .4em;
@@ -47,47 +40,7 @@ a {
 a:hover {
 	color: rgb(120, 97, 55);
 }
-pre {
-	font-size: 1.4em;
-	color: white;
-	padding: .5em 1em;
-	border-left: 1em solid #A68048;
-	background: #666;
-	white-space: pre-wrap;
-	white-space: -moz-pre-wrap;
-	white-space: -pre-wrap;
-	white-space: -o-pre-wrap;
-	word-wrap: break-word;
-	width: 80%;
-}
-pre.wrong {
-	border-left-color: red;
-}
-pre.correct {
-	border-left-color: green;
-}
-dt {
-	font-style: italic;
-	font-size:1.2em;
-}
-dd {
-	margin-bottom: 1.4em;
-}
-table {
-	margin-top: 1em;
-}
-caption {
-	margin: 0;
-	padding: 0;
-	margin-bottom: 1em;
-	text-align: left;
-}
-td, th {
-	padding: 10px;
-}
-.center {
-	text-align: center;
-}
+
 header h2 {
 	padding-bottom: .2em;
 	border-bottom: 1px solid gray;
@@ -101,28 +54,22 @@ aside {
 aside h4 {
 	color: white;
 }
-footer {
-	border-top: 1px solid gray;
-	text-align: center;
-	font-size: .8em;
-	line-height: 4em;
-	margin-top: 1em;
-}
 
-/*tab styles*/
-aside.languages {
-	font: .8em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+#linkBox {
+	/*
+	*/
 	background: rgb(0,32,96);
 	padding: 25px;
-	padding-top: 1em;
-	float: left;
-	width: 250px;
-	height: 1000px;
-	margin-left: 1em;
-	margin-right: 1em;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	border-style: solid;
     border-width: 1px;
     border-color: rgb(65, 113, 156);
+	margin: 1em;
+/* 	position: fixed; */
+/* 	float: left; */
+/* 	width: 250px; */
+/* 	height: 800px; */
 }
 
 .languages h3 {
@@ -132,64 +79,72 @@ aside.languages {
 	margin-bottom:.5em;
 }
 
-#tabContainer h4 {
-	color: rgb(83, 104, 138);
-	font-size: 2em;
-}
-
-#tabs ol, #tabs li {
-	margin:0;
-	padding:0;
-}
-
 #tabs>ol>li {
-	/*
-	display:block;
-	height: 30px;
-	overflow: hidden;
-	float:left;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
 	color: rgb(231, 230, 230);
-	*/
-	color: #FFF;
 	font: 1em;
 	list-style: none;
 	margin: 0 2px 0 0;
 	padding: 7px 10px;
-	background: #CCC;
 }
 
-#tabs > ul > li:hover{
-	background: white; 
+#tabs > ol > li:hover{
+	background: rgb(91, 155, 213); 
 	cursor:pointer;
 }
 
-#tabs > ul > .active{
-	background: white; /* old browsers */
+#tabs > ol > .active{
+	background: rgb(237, 125, 49);
 	cursor:pointer;
 }
 
-#containers  {
+#panel  {
 	/*background: white;
 	padding:10px 10px 25px;
 	margin:0;
 	color:#333;*/
 	font: .8em "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	background: rgb(231,230,230);
+	color: rgb(192, 0, 0);
 	padding: 25px;
 	padding-top: 1em;
-	position: absolute;
-	top: 25%;
-	right: 35%;
-	width: 500px;
 	margin-left: 1em;
 	margin-right: 1em;
 	border-style: solid;
     border-width: 1px;
     border-color: rgb(65, 113, 156);
+	position: relative;
+	top: 10%;
+/* 	right: 30%; */
+/* 	width: 500px; */
 }
+
+/* #panels { */
+/* 	position: absolute; */
+/* 	top: 10%; */
+/* 	right: 30%; */
+/* 	width: 500px; */
+/* } */
+
 #tabs a {
 	text-decoration: none;
-	color: black;
+	color: rgb(231, 230, 230);
+}
+
+img.mugshot {
+/* 	height: 256px; */
+	max-height:400px;
+}
+
+
+img.enemies {
+	max-width:100%;
+	max-height:100%;
+}
+
+hr {
+	border: 1px solid;
+	color: rgb(192, 0, 0);
+	border-color: rgb(192, 0, 0);
+	border-top-color: rgb(192, 0, 0);
+	background-color: rgb(192, 0, 0);
 }

@@ -15,10 +15,10 @@ body {
 }
 
 img.mugshot {
-	/*float: left;*/
-	/*width: 128px;*/
-	height: 256px;
+	/*float: left;
+	width: 128px;*/
 	margin-right: 20px;
+	height: 256px;
 }
 
 p.pos_fixed {

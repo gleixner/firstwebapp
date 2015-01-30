@@ -14,11 +14,25 @@ public class ContactServlet extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	protected void doGet( HttpServletRequest req, HttpServletResponse rep ) throws ServletException, IOException {
+		String email = req.getParameter("email");
+		if( email == null ) {
+			req.setAttribute("email", "Please enter an email");
+		}
+		req.getRequestDispatcher("EmailError.jsp").forward(req, rep);
+	}
 
 	protected void doPost( HttpServletRequest req, HttpServletResponse rep ) 
 			throws IOException, ServletException {
-//		String email = req.getParameter("email");
+		String email = req.getParameter("email");
 		String message = req.getParameter("message");
+//		req.setAttribute("email", email);
+		if( email == null || email.isEmpty() )
+			req.setAttribute("email", "Please enter an email");
+		else
+			req.setAttribute("email", email);
+		
 		
 		//TODO send email
 		if( message.replace("\\s+", "").equals("") )
@@ -29,7 +43,7 @@ public class ContactServlet extends HttpServlet {
 	
 	private void sendErrorMessage(HttpServletRequest req, HttpServletResponse rep) 
 			throws ServletException, IOException {
-		req.getRequestDispatcher("jsp/EmailError.jsp").forward(req, rep);
+		req.getRequestDispatcher("EmailError.jsp").forward(req, rep);
 	}
 
 	private void sendSuccessReply( HttpServletRequest req, HttpServletResponse rep ) 

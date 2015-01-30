@@ -9,8 +9,9 @@ window.onload=function() {
     // when the page loads, grab the li elements
     tabLinks = document.getElementById("tabs").getElementsByTagName("li");
 	// Now get all the tab panel container divs
-	tabPanels = document.getElementById("containers").getElementsByTagName("div");
+	tabPanels = document.getElementById("mainBox").getElementsByClassName("panelBag");
 
+    
     // activate the _first_ one
     displayPanel(tabLinks[0]);
 
