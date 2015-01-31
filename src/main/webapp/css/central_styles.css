@@ -59,17 +59,37 @@ aside h4 {
 	/*
 	*/
 	background: rgb(0,32,96);
+	height: 51em;
+	
 	padding: 25px;
 	padding-top: 50px;
 	padding-bottom: 50px;
 	border-style: solid;
     border-width: 1px;
     border-color: rgb(65, 113, 156);
+	position: fixed;
 	margin: 1em;
-/* 	position: fixed; */
+	
+	
 /* 	float: left; */
 /* 	width: 250px; */
 /* 	height: 800px; */
+
+/* 	padding: 25px; */
+/* 	padding-top: 1em; */
+/* 	margin-left: 1em; */
+/* 	margin-right: 1em; */
+/* 	border-style: solid; */
+/*  border-width: 1px; */
+/*  border-color: rgb(65, 113, 156); */
+/* 	position: relative; */
+/* 	top: 50px; */
+}
+
+#spacer1 {
+	height: 325px;
+	z-index: -1;
+	margin: 1em;
 }
 
 .languages h3 {
@@ -113,17 +133,19 @@ aside h4 {
     border-width: 1px;
     border-color: rgb(65, 113, 156);
 	position: relative;
-	top: 10%;
+	top: 50px;
+	
+	overflow: auto;
+	height: 62em;
+	width: 50em;
 /* 	right: 30%; */
 /* 	width: 500px; */
 }
 
-/* #panels { */
-/* 	position: absolute; */
-/* 	top: 10%; */
-/* 	right: 30%; */
-/* 	width: 500px; */
-/* } */
+#mainBox {
+	float: left;
+/* 	position: fixed; */
+}
 
 #tabs a {
 	text-decoration: none;
@@ -148,3 +170,7 @@ hr {
 	border-top-color: rgb(192, 0, 0);
 	background-color: rgb(192, 0, 0);
 }
+
+/* * { */
+/* 	border: 1px solid red; */
+/* } */
