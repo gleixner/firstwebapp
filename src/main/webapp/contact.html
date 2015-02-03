@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta name="currentPage" content="Contact Me"/>
 <title>Contact Me</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/bootstrap-theme.css">
@@ -18,8 +19,7 @@
 	</script>
 </head>
 <body>
-	<h1>Contact Me</h1>
-	<form method="POST" action="submitContact">
+	<form method="GET" action="submitContact">
 		<div class="control-group">
 			<!-- <label class="control-label" for="email">Email!</label> -->
 			<div class="form-group col-sm-12 col-md-12 col-lg-12" id="email">
@@ -28,7 +28,9 @@
 					placeholder="Enter email">
 			</div>
 		</div>
-		<div class="form-group col-sm-12 col-md-12 col-lg-12">Message:</div>
+		
+		<div class="clearfix"></div>
+		
 		<div class="form-group col-sm-12 col-md-12 col-lg-12" id="message">
 			<label for="message">Message</label> <input type="text"
 				class="form-control" name="message" placeholder="Talk to me!">
@@ -46,5 +48,7 @@
 		<img src="img/mchammer.gif"> <img src="img/mchammer.gif">
 		<img src="img/mchammer.gif">
 	</center>
+	
+	<div class="clearfix"></div>
 </body>
 </html>

@@ -2,7 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "NineVoltBattery">
 <html>
 <head>
-	<title>ERROR!!!!1!111</title>
+	<meta name="currentPage" content="Error!"/>
+	<title>Error!</title>
+	
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -17,7 +19,7 @@
 </head>
 <body>
 	<h1>OH NoOoOeEeEsSsS!!!1!!11</h1>
-	<h1>YOU MESSED IT UP LIKE A DUMMY!</h1>
+	<h1>YOU MESSED IT UP!</h1>
 	<form method="POST" action="submitContact">
 	<div class="control-group">
   		<div class="form-group col-sm-12 col-md-12 col-lg-12" id="email">

@@ -34,6 +34,17 @@
 		<servlet-class>com.expeditors.training.web.ContactServlet
 		</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>ProductListServlet</servlet-name>
+		<servlet-class>com.expeditors.training.web.ProductListServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AddProductServlet</servlet-name>
+		<servlet-class>com.expeditors.training.web.AddProductServlet</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>HelloWorldServlet</servlet-name>
@@ -42,6 +53,14 @@
 	<servlet-mapping>
 		<servlet-name>ContactServlet</servlet-name>
 		<url-pattern>/submitContact</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddProductServlet</servlet-name>
+		<url-pattern>/addProduct</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>ProductListServlet</servlet-name>
+		<url-pattern>/products</url-pattern>
 	</servlet-mapping>
 
 

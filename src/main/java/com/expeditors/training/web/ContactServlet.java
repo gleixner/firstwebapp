@@ -17,14 +17,16 @@ public class ContactServlet extends HttpServlet {
 	
 	protected void doGet( HttpServletRequest req, HttpServletResponse rep ) throws ServletException, IOException {
 		String email = req.getParameter("email");
-		if( email == null ) {
+		
+		if( email == null || email.isEmpty() )
 			req.setAttribute("email", "Please enter an email");
-		}
+		else
+			req.setAttribute("email", email);
+		
 		req.getRequestDispatcher("EmailError.jsp").forward(req, rep);
 	}
 
-	protected void doPost( HttpServletRequest req, HttpServletResponse rep ) 
-			throws IOException, ServletException {
+	protected void doPost( HttpServletRequest req, HttpServletResponse rep ) throws IOException, ServletException {
 		String email = req.getParameter("email");
 		String message = req.getParameter("message");
 //		req.setAttribute("email", email);
